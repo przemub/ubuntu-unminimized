@@ -1,4 +1,5 @@
-FROM ubuntu:focal
+ARG TAG
+FROM ubuntu:$TAG
 
 ENV DEBIAN_FRONTEND noninteractive
 
