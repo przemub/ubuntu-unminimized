@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -eux
 
-TAGS=(focal bionic jammy 18.04 20.04 22.04)
+# HACKME: From 24.10, unminimize will need to be installed separately.
+
+TAGS=(focal bionic jammy noble 18.04 20.04 22.04 24.04)
 PLATFORMS="linux/amd64,linux/arm64"
 
 IFS=',' read -ra PLATFORM_ARRAY <<< "$PLATFORMS"
