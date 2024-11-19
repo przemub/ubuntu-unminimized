@@ -34,12 +34,13 @@ jobs:
         run: $GITHUB_WORKSPACE/build.sh
 
       - name: Create last update file
-        run: date +%s > last-update.txt
+        run: date > last-update.txt
 
       - name: Commit last-update.txt
         run: |
           git config --global user.name "Przemysław Buczkowski"
           git config --global user.email "przemub@users.noreply.github.com"
+          git add last-update.txt
           git commit -m "Auto-update last-update.txt" last-update.txt
           git push
 
