@@ -13,6 +13,6 @@ do
         docker pull przemub/ubuntu-unminimized:$tag --platform $platform || true
     done
 
-    docker buildx build -f Dockerfile --platform $PLATFORMS -t przemub/ubuntu-unminimized:$tag --build-arg TAG=$tag --push .
+    docker buildx build -f Dockerfile --platform $PLATFORMS -t przemub/ubuntu-unminimized:$tag --build-arg TAG=$tag --pull --push .
 done
 
